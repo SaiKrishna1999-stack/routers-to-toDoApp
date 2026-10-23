@@ -9,7 +9,7 @@ import { ActivatedRoute, RouterOutlet, RouterLink, ResolveFn, ActivatedRouteSnap
   templateUrl: './user-tasks.component.html',
   styleUrl: './user-tasks.component.css',
 })
-export class UserTasksComponent {
+export class UserTasksComponent{
   // @Input() userid!: string;
     message = input.required<string>();
     userName = input.required<string>();
@@ -28,6 +28,15 @@ export class UserTasksComponent {
   //       this.userName = this.users.users.find((user) => user.id === param.get('userid'))?.name || '';
   //     }
   //   })
+  // }
+
+  // ngOnInit() {
+  //   console.log('Activated Route:', this.activatedRoute);
+  //   this.activatedRoute.data.subscribe({
+  //     next: (data) => {
+  //       console.log('Data from resolver:', data);
+  //     }
+  //   });
   // }
 }
 

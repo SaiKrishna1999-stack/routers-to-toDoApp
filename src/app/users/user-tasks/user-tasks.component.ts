@@ -46,3 +46,7 @@ export const getUserName: ResolveFn<string> = (activatedRoute: ActivatedRouteSna
   const user = users.users.find((u) => u.id === userId);
   return user ? user.name : '';
 }
+
+export const resolveTitle: ResolveFn<string> = (activedRouteSnapshot: ActivatedRouteSnapshot, routerStateSnapshot: RouterStateSnapshot) => {
+  return getUserName(activedRouteSnapshot, routerStateSnapshot) + "'s Tasks";
+}

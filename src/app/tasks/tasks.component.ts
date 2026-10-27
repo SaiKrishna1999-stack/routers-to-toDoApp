@@ -13,7 +13,7 @@ import { RouterLink, ResolveFn, ActivatedRoute, ActivatedRouteSnapshot, RouterSt
   imports: [TaskComponent, RouterLink],
 })
 export class TasksComponent {
-  order= signal<'asc' | 'desc'>('desc');
+  order= input<'asc' | 'desc'>('desc');
   userid = input.required<string>();
   userTasks = input.required<Task[]>();
 }
